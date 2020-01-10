@@ -1,0 +1,148 @@
+{
+  "books": [
+    {
+      "_id": 1,
+      "isbn": "9780136083238",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "description": "Clean Code is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code—of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and “smells” gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code.",
+      "issued": "1217548800",
+      "publisher": "Prentice Hall",
+      "rating": 5,
+      "topic": "Coding Practices",
+      "cover": "CleanCode.jpg"
+    },
+    {
+      "_id": 2,
+      "isbn": "9781617293726",
+      "title": "Kubernetes in Action",
+      "author": "Marko Lukša",
+      "description": "Kubernetes in Action is a comprehensive guide to effectively developing and running applications in a Kubernetes environment. Before diving into Kubernetes, the book gives an overview of container technologies like Docker, including how to build containers, so that even readers who haven't used these technologies before can get up and running.",
+      "issued": "1512086400",
+      "publisher": "Manning Publications",
+      "rating": 3,
+      "topic": "Kubernetes",
+      "cover": "Kubernetes_in_Action.png"
+    },
+    {
+      "_id": 3,
+      "isbn": "9781492036739",
+      "title": "Docker: Up & Running, 2nd Edition",
+      "author": "Karl Matthias, Sean P. Kane",
+      "description": "Docker is rapidly changing the way organizations deploy software at scale. However, understanding how Linux containers fit into your workflow—and getting the integration details right—is not a trivial task. With the updated edition of this practical guide, you’ll learn how to use Docker to package your applications with all of their dependencies and then test, ship, scale, and support your containers in production.",
+      "issued": "1217548800",
+      "publisher": "O'Reilly Media, Inc.",
+      "rating": 4,
+      "topic": "Docker",
+      "cover": "Docker_Up_Running.jpg"
+    },
+    {
+      "_id": 4,
+      "isbn": "9781484238585",
+      "title": "Microservices for the Enterprise: Designing, Developing, and Deploying",
+      "author": "Prabath Siriwardena, Kasun Indrasiri",
+      "description": "Understand the key challenges and solutions around building microservices in the enterprise application environment. This book provides a comprehensive understanding of microservices architectural principles and how to use microservices in real-world scenarios.",
+      "issued": "1541030400",
+      "publisher": "Apress",
+      "rating": 4,
+      "topic": " Microservices",
+      "cover": "Microservices_for_the_Enterprise.jpg"
+    },
+    {
+      "_id": 5,
+      "isbn": "9781617294532",
+      "title": "C# in Depth, Fourth Edition",
+      "author": "Jonathan Skeet",
+      "description": "C# in Depth, Fourth Edition is a revised edition of the bestseller written by C# legend Jon Skeet. This authoritative and engaging guide is your key to unlocking this powerful language, including the new features of C# 6 and 7. In it, Jon introduces expression-bodied members, interpolated strings, pattern matching, and more. Real-world examples drive it all home. By the end of this awesome book, you'll be writing C# code with skill, style, and confidence.",
+      "issued": "1554076800",
+      "publisher": "Manning Publications",
+      "rating": 4,
+      "topic": "C#",
+      "cover": "C-sharp_in_Depth.png"
+    },
+    {
+      "_id": 6,
+      "isbn": "9781448177202",
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "description": "A survival story for the 21st century and the international bestseller behind the major film from Ridley Scott starring Matt Damon and Jessica Chastain.",
+      "issued": "1392249600",
+      "publisher": "Ebury Digital",
+      "rating": 2,
+      "topic": "TheMartian.jpg",
+      "cover": "image"
+    },
+    {
+      "_id": 7,
+      "isbn": "9781405935470",
+      "title": "Tom Clancy's Oath of Office",
+      "author": "Marc Cameron",
+      "description": "On a crowded tourist beach in Portugal, US operatives use a high-tech drone to watch a French arms dealer flirt with a beautiful woman. But it's only when she leaves that they realise she has shot him dead.",
+      "issued": "1571270400",
+      "publisher": "Penguin",
+      "rating": 1,
+      "topic": "Action & Adventure",
+      "cover": "Tom_Clancy's_Oath_of_Office.jpg"
+    },
+    {
+      "_id": 8,
+      "isbn": "9780141033570",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "description": "Why is there more chance we'll believe something if it's in a bold type face? Why are judges more likely to deny parole before lunch? Why do we assume a good-looking person will be more competent? The answer lies in the two ways we make choices: fast, intuitive thinking, and slow, rational thinking. This book reveals how our minds are tripped up by error and prejudice (even when we think we are being logical), and gives you practical techniques for slower, smarter thinking. It will enable to you make better decisions at work, at home, and in everything you do.",
+      "issued": "1349395200",
+      "publisher": "Penguin",
+      "rating": 5,
+      "topic": "Inspire change",
+      "cover": "image"
+    },
+    {
+      "_id": 9,
+      "isbn": "9780241973417",
+      "title": "The Trick to Time",
+      "author": "Kit de Waal",
+      "description": "Some moments you want to last forever. Some moments shape a life. For Mona, it's the joy of playing on a Wexford beach as a young girl, next to her family's cottage overlooking the Irish sea. The thrill of moving to Birmingham with a new job and a room of her own in a busy boarding-house. Meeting the love of her life; a whirlwind marriage; a sudden, tragic loss. But now, decades later, Mona is determined to find happiness before it's too late. She knows that every moment is precious",
+      "issued": "1562198400",
+      "publisher": "Penguin",
+      "rating": 3,
+      "topic": "Romance",
+      "cover": "The_Trick_to_Time.jpg"
+    },
+    {
+      "_id": 10,
+      "isbn": "9781617294457",
+      "title": "Microservices in Action",
+      "author": "Paulo A Pereira, Morgan Bruce",
+      "description": "Microservices in Action teaches you how to write and maintain microservice-based applications. Created with day-to-day development in mind, this informative guide immerses you in real-world use cases from design to deployment. You’ll discover how microservices enable an efficient continuous delivery pipeline, and explore examples using Kubernetes, Docker, and Google Container Engine.",
+      "issued": "1539129600",
+      "publisher": "Manning Publications",
+      "rating": 5,
+      "topic": "Microservices",
+      "cover": "Microservices_in_Action.jpg"
+    },
+    {
+      "_id": 11,
+      "isbn": "9780596007126",
+      "title": "Head First Design Patterns",
+      "author": "Kathy Sierra, Bert Bates, Elisabeth Robson, Eric Freeman",
+      "description": "At any given moment, someone struggles with the same software design problems you have. And, chances are, someone else has already solved your problem. This edition of Head First Design Patterns—now updated for Java 8—shows you the tried-and-true, road-tested patterns used by developers to create functional, elegant, reusable, and flexible software. By the time you finish this book, you’ll be able to take advantage of the best design practices and experiences of those who have fought the beast of software design and triumphed.",
+      "issued": "1097366400",
+      "publisher": "O'Reilly Media, Inc.",
+      "rating": 3,
+      "topic": "Design Patterns",
+      "cover": "image"
+    },
+    {
+      "_id": 12,
+      "isbn": "9780141033570",
+      "title": "Monolith to Microservices",
+      "author": "Sam Newman",
+      "description": "How do you detangle a monolithic system and migrate it to a microservice architecture? How do you do it while maintaining business-as-usual? As a companion to Sam Newman’s extremely popular Building Microservices, this new book details a proven method for transitioning an existing monolithic system to a microservice architecture.",
+      "issued": "1573430400",
+      "publisher": "O'Reilly Media, Inc.",
+      "rating": 1,
+      "topic": "Microservices",
+      "cover": "Monolith_to_Microservices.jpg"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "env": "dev",
+  "appTitle": "E-Book",
+  "appVersion": "0.0.1",
+  "appDescription": "Display a list of favorite books with rating and sort.",
+  "companyUrl": "https://hexad.de",
+  "appLogo": "../assets/images/ebook.png",
+  "companyLogo": "https://hexad.de/wp-content/themes/hexad/img/hexad-logo.png",
+  "author": {
+    "name": "Nasr Eldin Mohamed",
+    "title": "Software Engineer",
+    "email": "Full Stack Engineer",
+    "stackoverflow": "https://stackoverflow.com/story/nasraldin",
+    "linkedIn": "https://www.linkedin.com/in/nasreldin"
+  },
+  "tools": "Angular, Rxjs, Ngrx, express.js, bootstrap, ng-bootstrap"
+}
