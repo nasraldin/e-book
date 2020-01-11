@@ -7,13 +7,13 @@ const router = express.Router();
 
 // LIST ENDPOINTS
 router.get(CONSTANTS.ENDPOINT.LIST, function (req, res) {
-  res.json(booksData.books);
+  res.json(booksData);
 });
 
 // Detail Endpoint
 router.get(CONSTANTS.ENDPOINT.DETAILS + "/:_id", (req, res) => {
   const { _id } = req.params;
-  var index = findElement(booksData.books, "_id", Number(_id));
+  var index = findElement(booksData, "_id", Number(_id));
   // console.log(index);
   if (index) {
     res.json(index);

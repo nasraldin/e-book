@@ -5,6 +5,7 @@ export interface Book {
   author: string;
   description: string;
   publisher: string;
+  issued: string;
   rating: number;
   topic: string;
   cover: string;

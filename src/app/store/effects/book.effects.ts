@@ -32,7 +32,11 @@ export class BookEffects {
   @Effect()
   getBooks$ = this.actions$.pipe(
     ofType<GetBooks>(EBookActions.GetBooks),
-    switchMap(() => this.bookService.getBooks()),
+    // switchMap(() => this.bookService.getBooks()),
+    switchMap(() => {
+      // console.log(this.bookService.getBooks());
+      return this.bookService.getBooks();
+    }),
     switchMap((bookHttp: BookHttp) => of(new GetBooksSuccess(bookHttp.books)))
   );
 
