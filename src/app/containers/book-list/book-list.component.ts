@@ -7,8 +7,7 @@ import { selectBookList } from '../../store/selectors/book.selector';
 import { Router } from '@angular/router';
 
 @Component({
-  templateUrl: './book-list.component.html',
-  styleUrls: ['./book-list.component.scss']
+  templateUrl: './book-list.component.html'
 })
 export class BookListContainerComponent implements OnInit {
   books = this.store.pipe(select(selectBookList));

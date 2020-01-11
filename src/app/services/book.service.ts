@@ -3,7 +3,7 @@ import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap, shareReplay } from 'rxjs/operators';
 import { Book } from '../models/book.model';
 
 @Injectable({ providedIn: 'root' })
@@ -25,9 +25,11 @@ export class BookService {
   }
 
   getBooks(): Observable<BookHttp> {
-    return this.http
-      .get<BookHttp>(this.bookListUrl)
-      .pipe(catchError(this.handleError));
+    return this.http.get<BookHttp>(this.bookListUrl).pipe(
+      tap(book => book.books.sort((a, b) => b.rating - a.rating)),
+      shareReplay(),
+      catchError(this.handleError)
+    );
   }
 
   getBookDetails(id: number): Observable<Book> {

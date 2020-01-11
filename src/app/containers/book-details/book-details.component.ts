@@ -6,8 +6,7 @@ import { selectSelectedBook } from '../../store/selectors/book.selector';
 import { GetBook } from '../../store/actions/book.actions';
 
 @Component({
-  templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.scss']
+  templateUrl: './book-details.component.html'
 })
 export class BookDetailsContainerComponent implements OnInit {
   book = this.store.pipe(select(selectSelectedBook));

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Book } from '../../../models/book.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-book-details',
@@ -9,7 +10,11 @@ import { Book } from '../../../models/book.model';
 export class BookDetailsComponent implements OnInit {
   @Input() book: Book;
 
-  constructor() {}
+  constructor(private location: Location) {}
 
   ngOnInit() {}
+
+  back() {
+    this.location.back();
+  }
 }

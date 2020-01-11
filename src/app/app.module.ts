@@ -23,7 +23,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { BookEffects } from './store/effects/book.effects';
 import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
 import { BookListComponent } from './components/book/list/book-list.component';
-import { BookCardComponent } from './components/book/list/book-card/book-card.component';
 import { BookDetailsComponent } from './components/book/details/book-details.component';
 import { BookListContainerComponent } from './containers/book-list/book-list.component';
 import { BookDetailsContainerComponent } from './containers/book-details/book-details.component';
@@ -36,7 +35,6 @@ import { BookDetailsContainerComponent } from './containers/book-details/book-de
     SidebarComponent,
     AboutTaskComponent,
     BookListComponent,
-    BookCardComponent,
     BookDetailsComponent,
     BookListContainerComponent,
     BookDetailsContainerComponent
