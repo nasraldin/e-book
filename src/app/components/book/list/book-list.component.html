@@ -26,7 +26,10 @@
       </div>
       <div class="col-5" style="left: -114px;">
         <div class="form-group row">
-          <label for="inlineFormCustomSelectPref" class="col-sm-3 pl-0" style="right: -30px;"
+          <label
+            for="inlineFormCustomSelectPref"
+            class="col-sm-3 pl-0"
+            style="right: -30px;"
             >Topics</label
           >
           <div class="col-sm-9 sorting-input" style="top: -8px;">
@@ -54,10 +57,8 @@
             type="text"
             name="searchTerm"
             placeholder="Type here to search"
-            [(ngModel)]="searchQuery"
-            (keyup)="setStatus()"
           />
-          <span class="ml-3" *ngIf="noSearchResult">Loading...</span>
+          <span class="ml-3">Loading...</span>
         </div>
       </div>
     </div>
@@ -65,42 +66,44 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-4">
-  <div class="col mb-4">
+  <div class="col mb-4" *ngFor="let book of books">
     <div class="card h-100">
       <img
-        src="../../../assets/images/C-sharp_in_Depth.png"
+        [src]="coverPath + book.cover"
         class="card-img-top"
-        alt="..."
+        alt="{{ book.title }}"
       />
       <div class="card-body">
-        <h5 class="card-title">Kubernetes in Action</h5>
+        <h5 class="card-title">{{ book.title }}</h5>
         <div class="book-info">
           <div>
             <span>
               by
             </span>
-            <a href="">Nasr Eldin</a>
+            <a href="">{{ book.author }}</a>
           </div>
           <div>
             <span>
               Publisher:
             </span>
-            <a href="">Manning Publications</a>
+            <a href="">{{ book.publisher }}</a>
           </div>
           <div style="font-style: italic;">
             <span>
               Release Date:
             </span>
-            December 2017
+            {{ book.issued }}
           </div>
           <div>
             <span>
               ISBN:
             </span>
-            9781617293726
+            {{ book.isbn }}
           </div>
           <div>
-            <span> Topic: <a href="">Design</a> </span>
+            <span>
+              Topic: <a href=""> {{ book.topic }}</a>
+            </span>
           </div>
         </div>
       </div>
@@ -111,6 +114,7 @@
           data-toggle="modal"
           data-target=".bd-example-modal-xl"
           style="border-radius: 0;"
+          (click)="navigateToBook(book._id)"
         >
           <i class="fas fa-book"></i> Details
         </button>

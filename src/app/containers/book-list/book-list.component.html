@@ -1,0 +1,4 @@
+<app-book-list
+  [books]="books | async"
+  (bookSelected)="navigateToBook($event)"
+></app-book-list>

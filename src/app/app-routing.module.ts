@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { BookListComponent } from './components/book-list/book-list.component';
 import { AboutTaskComponent } from './components/about-task/about-task.component';
+import { BookListContainerComponent } from './containers/book-list/book-list.component';
+import { BookDetailsContainerComponent } from './containers/book-details/book-details.component';
 
 const routes: Routes = [
-  { path: '', component: BookListComponent },
+  { path: '', component: BookListContainerComponent },
+  { path: 'details/:id', component: BookDetailsContainerComponent },
   { path: 'about-task', component: AboutTaskComponent }
 ];
 
