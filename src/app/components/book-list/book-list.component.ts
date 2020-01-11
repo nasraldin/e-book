@@ -10,14 +10,12 @@ import { catchError } from 'rxjs/operators';
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
-  // providers: [Web3Service]
 })
 export class BookListComponent implements OnInit {
-  // eventsModel: ContractEvent[];
   gridItems$: Observable<Book[]>;
-
   searchQuery: string;
   noSearchResult: boolean;
+
   public config: PaginationInstance = {
     itemsPerPage: 10,
     currentPage: 1
@@ -27,7 +25,6 @@ export class BookListComponent implements OnInit {
   substring = ConvertHelper.substringTo26Chart;
   unixTimestamp = ConvertHelper.unixTimestamp;
 
-  // public service: Web3Service
   constructor(private service: BookService) {}
 
   ngOnInit() {

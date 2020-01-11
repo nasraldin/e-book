@@ -25,16 +25,14 @@ export class BookService {
   }
 
   getBooks(): Observable<BookHttp> {
-    return this.http.get<BookHttp>(this.bookListUrl);
+    return this.http
+      .get<BookHttp>(this.bookListUrl)
+      .pipe(catchError(this.handleError));
   }
 
   getBookDetails(id: number): Observable<Book> {
-    return this.http.get<Book>(this.bookListUrl + `/${id}`);
-  }
-
-  getGridItems(): Observable<Book[]> {
     return this.http
-      .get<Book[]>(this.bookListUrl)
+      .get<Book>(this.bookDetailsUrl + `/${id}`)
       .pipe(catchError(this.handleError));
   }
 }
