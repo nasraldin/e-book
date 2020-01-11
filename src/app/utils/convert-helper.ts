@@ -5,19 +5,23 @@ export class ConvertHelper {
    * @return string ex: (value...)
    */
   static substringTo26Chart(val: string) {
-    if (val) {
+    if (val && val.length > 20) {
       return val.substring(0, 26) + '...';
     }
+
+    return val;
   }
 
   /**
    * @desc Convert a Unix timestamp to datetime
    * @param  val Unix timestamp
-   * @return local datetime 10/21/2020, 5:18:56 AM
+   * @return local date August 2020
    */
   static unixTimestamp(val: number) {
+    const options = { year: 'numeric', month: 'long' };
+
     if (val) {
-      return new Date(val * 1000).toLocaleString();
+      return new Date(val * 1000).toLocaleDateString('en', options);
     }
   }
 }

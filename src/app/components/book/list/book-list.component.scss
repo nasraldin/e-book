@@ -71,3 +71,25 @@ ngb-carousel .picsum-img-wrapper > img {
   bottom: 0;
   right: 0;
 }
+
+.star {
+  font-size: 1.5rem;
+  color: #b0c4de;
+}
+.filled {
+  color: #1e90ff;
+}
+.bad {
+  color: #deb0b0;
+}
+.filled.bad {
+  color: #ff1e1e;
+}
+
+pre {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: -3px;
+  overflow: auto;
+  margin-right: 0.6rem;
+}
