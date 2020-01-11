@@ -1,0 +1,120 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom"
+>
+  <h1 class="h3 mb-0">Favorite Book List</h1>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="form-group row">
+          <label for="customSwitch1" class="col-sm-3 pl-0">Sorting</label>
+          <div class="col-sm-9 sorting-input">
+            <div class="custom-control custom-switch">
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customSwitch1"
+              />
+              <label class="custom-control-label" for="customSwitch1"
+                >ASC/DESC</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5" style="left: -114px;">
+        <div class="form-group row">
+          <label for="inlineFormCustomSelectPref" class="col-sm-3 pl-0" style="right: -30px;"
+            >Topics</label
+          >
+          <div class="col-sm-9 sorting-input" style="top: -8px;">
+            <select
+              class="custom-select my-1 mr-sm-2"
+              id="inlineFormCustomSelectPref"
+            >
+              <option selected>Choose...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col" style="left: -114px; top: -8px;">
+        <button type="submit" class="btn btn-primary my-1">
+          Random Rating
+        </button>
+      </div>
+      <div class="col-12" style="padding-left: 0;">
+        <div class="form-group form-inline">
+          <input
+            class="form-control w-50"
+            type="text"
+            name="searchTerm"
+            placeholder="Type here to search"
+            [(ngModel)]="searchQuery"
+            (keyup)="setStatus()"
+          />
+          <span class="ml-3" *ngIf="noSearchResult">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4">
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img
+        src="../../../assets/images/C-sharp_in_Depth.png"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Kubernetes in Action</h5>
+        <div class="book-info">
+          <div>
+            <span>
+              by
+            </span>
+            <a href="">Nasr Eldin</a>
+          </div>
+          <div>
+            <span>
+              Publisher:
+            </span>
+            <a href="">Manning Publications</a>
+          </div>
+          <div style="font-style: italic;">
+            <span>
+              Release Date:
+            </span>
+            December 2017
+          </div>
+          <div>
+            <span>
+              ISBN:
+            </span>
+            9781617293726
+          </div>
+          <div>
+            <span> Topic: <a href="">Design</a> </span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary btn-block"
+          data-toggle="modal"
+          data-target=".bd-example-modal-xl"
+          style="border-radius: 0;"
+        >
+          <i class="fas fa-book"></i> Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
