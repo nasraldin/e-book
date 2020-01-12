@@ -9,4 +9,4 @@ if (fs.existsSync("./dist")) {
 
 childProcess.execSync("ng build", { stdio: "inherit" });
 
-fse.moveSync("./dist", "./server/build", { overwrite: true });
+fse.copySync("./dist", "./server/build", { overwrite: true });
