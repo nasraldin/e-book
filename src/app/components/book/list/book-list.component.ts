@@ -24,6 +24,9 @@ export class BookListComponent implements OnInit {
     currentPage: 1
   };
 
+  random: boolean;
+  interval = null;
+
   constructor() {}
 
   ngOnInit() {}
@@ -36,10 +39,16 @@ export class BookListComponent implements OnInit {
     this.noSearchResult = !this.noSearchResult;
   }
 
-  // DOTO: this for test and need to refactory with story approach
-  randomRating(books: Book[]) {
-    books.forEach(book => {
-      book.rating = Math.floor(Math.random() * Math.floor(5)) + 1;
-    });
+  randomRating(books: Book[], startRandom: boolean) {
+    this.random = !this.random;
+    if (startRandom) {
+      this.interval = setInterval(() => {
+        books.forEach(book => {
+          book.rating = Math.floor(Math.random() * Math.floor(5)) + 1;
+        });
+      }, 1000);
+    } else {
+      clearInterval(this.interval);
+    }
   }
 }
