@@ -26,6 +26,7 @@ import { BookListComponent } from './components/book/list/book-list.component';
 import { BookDetailsComponent } from './components/book/details/book-details.component';
 import { BookListContainerComponent } from './containers/book-list/book-list.component';
 import { BookDetailsContainerComponent } from './containers/book-details/book-details.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { BookDetailsContainerComponent } from './containers/book-details/book-de
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([BookEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
-    !environment.production ? StoreDevtoolsModule.instrument() : []
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    OrderModule
   ],
   providers: [
     AppConfigService,
