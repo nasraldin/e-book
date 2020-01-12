@@ -69,8 +69,8 @@
       "issued": "1392249600",
       "publisher": "Ebury Digital",
       "rating": 2,
-      "topic": "TheMartian.jpg",
-      "cover": "image"
+      "topic": "Drama/Fantasy",
+      "cover": "TheMartian.jpg"
     },
     {
       "_id": 7,
@@ -82,7 +82,7 @@
       "publisher": "Penguin",
       "rating": 1,
       "topic": "Action & Adventure",
-      "cover": "Tom_Clancy's_Oath_of_Office.jpg"
+      "cover": "Tom_Clancy_Oath of_Office.jpg"
     },
     {
       "_id": 8,
@@ -94,7 +94,7 @@
       "publisher": "Penguin",
       "rating": 5,
       "topic": "Inspire change",
-      "cover": "image"
+      "cover": "Thinking_Fast_and_Slow.jpg"
     },
     {
       "_id": 9,
@@ -130,7 +130,7 @@
       "publisher": "O'Reilly Media, Inc.",
       "rating": 3,
       "topic": "Design Patterns",
-      "cover": "image"
+      "cover": "Head_First_Design_Patterns.jpg"
     },
     {
       "_id": 12,

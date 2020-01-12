@@ -1,0 +1,166 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom"
+>
+  <h1 class="h3 mb-0">Favorite Book List</h1>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-5" style="top: -5px;">
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            name="searchTerm"
+            placeholder="Type here to search"
+            [(ngModel)]="searchQuery"
+            (keyup)="setStatus()"
+          />
+          <span class="ml-3" *ngIf="noSearchResult">Loading...</span>
+        </div>
+      </div>
+      <div class="col" style="top: -10px;">
+        <button
+          type="submit"
+          class="btn btn-primary my-1"
+          (click)="randomRating(books, true)"
+          *ngIf="!random"
+        >
+          Random Rating
+        </button>
+        <button
+          type="submit"
+          class="btn btn-primary my-1"
+          (click)="randomRating(books, false)"
+          *ngIf="random"
+        >
+          Random Rating
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4">
+  <ng-container
+    *ngFor="
+      let book of books
+        | filter: searchQuery
+        | paginate: config
+        | orderBy: 'rating':true;
+      let _i = index
+    "
+  >
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img
+          [src]="coverPath + book.cover"
+          class="card-img-top"
+          alt="{{ book.title }}"
+        />
+        <div class="card-body">
+          <pre>Rate: <b>{{book.rating}}</b></pre>
+          <ngb-rating
+            [(rate)]="book.rating"
+            [max]="5"
+            (rateChange)="book.rating = $event"
+          >
+            <ng-template let-fill="fill" let-index="index">
+              <span
+                class="star"
+                [class.filled]="fill === 100"
+                [class.bad]="index < 3"
+                >&#9733;</span
+              >
+            </ng-template>
+          </ngb-rating>
+          <hr />
+          <ngb-highlight
+            class="card-title"
+            placement="top"
+            ngbTooltip="{{ book.title }}"
+            [result]="util.substringTo26Chart(book.title)"
+            [term]="searchQuery"
+            style="display: block;font-weight: 400;"
+          ></ngb-highlight>
+          <div class="book-info">
+            <div>
+              <span>
+                by
+              </span>
+              <a href="#!">{{ book.author }}</a>
+            </div>
+            <div>
+              <span>
+                Publisher:
+              </span>
+              <a href="#!">{{ book.publisher }}</a>
+            </div>
+            <div style="font-style: italic;">
+              <span>
+                Release Date:
+              </span>
+              {{ util.unixTimestamp(book.issued) }}
+            </div>
+            <div>
+              <span>
+                ISBN:
+              </span>
+              {{ book.isbn }}
+            </div>
+            <div>
+              <span>
+                Topic: <a href=""> {{ book.topic }}</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="btn btn-primary btn-block"
+            data-toggle="modal"
+            data-target=".bd-example-modal-xl"
+            style="border-radius: 0;"
+            (click)="navigateToBook(book._id)"
+          >
+            <i class="fas fa-book"></i> Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div class="d-flex justify-content-between p-2" *ngIf="config">
+  <div>
+    <span> Items: 12 </span>
+    <ngb-pagination
+      [collectionSize]="12"
+      [(page)]="config.currentPage"
+      [pageSize]="config.itemsPerPage"
+      [maxSize]="5"
+      [boundaryLinks]="true"
+      [rotate]="true"
+      class="d-inline-flex"
+    ></ngb-pagination>
+  </div>
+  <div>
+    <select
+      class="custom-select"
+      style="width: auto"
+      name="pageSize"
+      [(ngModel)]="config.itemsPerPage"
+    >
+      <option [ngValue]="4">4</option>
+      <option [ngValue]="8">8</option>
+      <option [ngValue]="12">12</option>
+    </select>
+    items per page
+  </div>
+</div>
+
+<ngb-alert type="danger" [dismissible]="false" *ngIf="!books">
+  No data yet!
+</ngb-alert>
