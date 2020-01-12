@@ -5,7 +5,7 @@ This project use Angular CLI version 8.3.21. Node js > 10.x
 [Project status and story tasks](https://github.com/nasraldin/e-book/projects/1)
 
 Vist
-[Demo](https://ebook-test.azurewebsites.net) link.
+[Demo](https://ebook-demo.azurewebsites.net) link.
 
 \*\* System analyst and test case
 
